@@ -10,6 +10,7 @@ class ProductsPage {
     sortDropdown: () => cy.get(".product_sort_container"),
     ajouterAuPanierBouton: (nomProduit) => cy.get(`[data-test="add-to-cart-${nomProduit}"]`),
     retirerDuPanierBouton: (nomProduit) => cy.get(`[data-test="remove-${nomProduit}"]`),
+    premierAddButton:()=>cy.get("#add-to-cart-sauce-labs-backpack")
   };
 
   cliquerSurProduit(nomProduit) {
@@ -53,6 +54,10 @@ class ProductsPage {
   verifierDetailProduit(nomProduit) {
     this.elements.productDetailTitle().should('be.visible').and('have.text', nomProduit);
   }
+  clickAddToCart(){
+  this.elements.premierAddButton().click();
+  }
+  
 }
 
 
