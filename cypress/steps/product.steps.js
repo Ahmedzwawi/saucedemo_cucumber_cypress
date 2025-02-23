@@ -8,7 +8,6 @@ Given('je suis sur {string}', function (url) {
 });
 
 When('j-e saisis le username {string}', function (username) {
-  // cy.get('#user-name').type(username);
   loginPage.saisirUsername(username);
 });
 When('je saisi le password {string}', function (password) {
@@ -16,7 +15,6 @@ When('je saisi le password {string}', function (password) {
 });
 
 When('je clique sur le bouton {string}', function () {
-  // cy.get(`#${buttonId}`).click();
   loginPage.cliqueSurLoginButton();
 
 });
